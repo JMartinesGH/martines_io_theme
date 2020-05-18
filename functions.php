@@ -16,3 +16,5 @@ add_action( 'init', 'register_menus' );
 
 // CUSTOMIZER ADD-ONS
 require_once( get_template_directory() . '/functions/customizer.php');
+
+// Custom Post Types
