@@ -6,15 +6,17 @@ Author: Jamie Martines
 /*  Reset */
 /* Box sizing rules */
 @import 'reset';
+$bg_color1 : #606dbc;
+$bg_color2 : #465298;
 
 html{
   box-sizing: border-box;
   background: repeating-linear-gradient(
       45deg,
-      #606dbc,
-      #606dbc 40px,
-      #465298 40px,
-      #465298 80px
+      $bg_color1,
+      $bg_color1 40px,
+      $bg_color2 40px,
+      $bg_color2 80px
   );
   font-family: 'Glegoo', serif;
 }
