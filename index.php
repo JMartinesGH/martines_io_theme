@@ -7,23 +7,12 @@
     $query = new WP_Query(array('posts_per_page' => 3));
     if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
 
-        <h3><?php the_title(); ?></h3>
+        <h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo wp_trim_words( get_the_title(), 10, '...' ); ?></a></h3>
 
         <?php the_excerpt(); ?>
         <?php wp_link_pages(); ?>
 
       <?php endwhile; ?>
-
-      <?php
-      if (get_next_posts_link()) {
-        next_posts_link();
-      }
-      ?>
-      <?php
-      if (get_previous_posts_link()) {
-        previous_posts_link();
-      }
-      ?>
 
     <?php else : ?>
 

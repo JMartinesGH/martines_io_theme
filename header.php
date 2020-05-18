@@ -24,4 +24,7 @@
       <?php if (has_nav_menu('header-menu')) {
         wp_nav_menu(array('theme_location' => 'header-menu'));
       } ?>
+      <?php if( is_front_page() ): ?>
+        <!-- front page -->
+      <?php endif?>
     </header>
