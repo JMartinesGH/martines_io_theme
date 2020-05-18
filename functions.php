@@ -18,3 +18,6 @@ add_action( 'init', 'register_menus' );
 require_once( get_template_directory() . '/functions/customizer.php');
 
 // Custom Post Types
+
+// acf
+require_once( get_template_directory() . '/functions/acf.php');

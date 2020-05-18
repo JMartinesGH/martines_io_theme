@@ -26,5 +26,8 @@
       } ?>
       <?php if( is_front_page() ): ?>
         <!-- front page -->
+        <p>
+          <?php echo the_field('mio-introduction', 'option'); ?>
+        </p>
       <?php endif?>
     </header>
