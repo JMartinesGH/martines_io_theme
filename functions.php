@@ -13,3 +13,6 @@ function register_menus() {
   );
 }
 add_action( 'init', 'register_menus' );
+
+// CUSTOMIZER ADD-ONS
+require_once( get_template_directory() . '/functions/customizer.php');
