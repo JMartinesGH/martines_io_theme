@@ -21,7 +21,7 @@ function create_projects() {
     'description'   => 'Holds our projects and project specific data',
     'public'        => true,
     'menu_position' => 5,
-    'supports'      => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt', 'gutenberg' ),
+    'supports'      => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt' ),
     'has_archive'   => true,
     'show_in_rest'  => true,
     'rewrite'       => array('slug' => 'projects')

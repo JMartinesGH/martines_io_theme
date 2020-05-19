@@ -4,65 +4,52 @@
 <div class="row">
   <div class="column square">
     <h3>Experience</h3>
+    <?php
+    // check if the repeater field has rows of data
+    if (have_rows('jobs')) :
+
+      // loop through the rows of data
+      while (have_rows('jobs')) : the_row(); ?>
+        <div class="job">
+          <strong>
+            <?php the_sub_field('job_title'); ?><br />
+            <?php the_sub_field('job_company_name'); ?>, <?php the_sub_field('job_team'); ?>
+          </strong>
+          <br />
+          <span class='small'>
+          <?php the_sub_field('job_location'); ?> || <?php the_sub_field('job_date_range'); ?>
+          </span>
+          <ul>
+          <?php
+          // check if the repeater field has rows of data
+          if (have_rows('job_about')) :
+
+            // loop through the rows of data
+            while (have_rows('job_about')) : the_row(); ?>
+              <li><?php the_sub_field('job_about_task');?></li>
+            <?php endwhile;
+          endif; ?>
+          </ul>
+        </div>
+    <?php endwhile;
+
+    else :
+
+    // no rows found
+
+    endif;
+
+    ?>
     <div class="job">
-      <strong>
-        Front-End Developer <br />
-        One Kings Lane, E-Commerce Team
-      </strong>
-      <br />
-      <span class='small'>
-        NEW YORK, NY || NOV 2017 &dash;
-        JULY
-        2019
-      </span>
-      <ul>
-        <li>Created bespoke marketing materials for the home and landing pages</li>
-        <li>Developed custom widgets in Java for the Kibo environment, Javascript for landing pages, and
-          React</li>
-        <li>Performed A/B Testing using Optimizely</li>
-      </ul>
+    <?php
+    if (have_posts()) {
+
+      while (have_posts()) {
+        the_post();
+          the_content();
+      }
+    }?>
     </div>
-    <div class="job">
-      <strong>
-        Developer </strong><br />
-      Wall Street Journal Custom Studios
-      <br />
-      <span class='small'>
-        NEW YORK, NY || OCT 2016 &dash;
-        OCT
-        2017
-      </span>
-      <ul>
-        <li>Development of custom WordPress themes, plugins, and extensions for advertising campaigns
-        </li>
-        <li>Created internal tools for reducing repeated developer and performance tasks</li>
-        <li>Worked alongside editors & project managers to create a better UX for custom WordPress tools
-        </li>
-        <li>Evangelized build tools and templatization to the development team</li>
-        <li>Lead developer on a product built on top of WordPress for client self-publishing with
-          internal reporting, customizable templates, and scalability. Integral to the projects
-          architecture, development cycle, and internal language.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <strong>
-        Developer </strong><br />
-      Reflexions
-      <br />
-      <span class='small'>
-        NEW YORK, NY || SEPT 2015 &dash;
-        OCT
-        2016
-      </span>
-      <ul>
-        <li>Working with designers and clients to develop custom WordPress (themes & plugins) & Laravel
-        </li>
-        <li>Project management and client relationships</li>
-        <li>3D Modeling for a custom WebGL application</li>
-        <li>iOS development with Swift for a prototype application</li>
-      </ul>
-    </div>
-    <div class="job">For full work history see my <a href="https://www.linkedin.com/in/martinesj/" target='_blank'>LinkedIn <span class='print'>https://linkedin.com/in/martinesj/</span></a></div>
   </div>
   <div class="column three">
     <div id="skills" class='square'>
