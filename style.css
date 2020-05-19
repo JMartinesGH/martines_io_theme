@@ -114,6 +114,9 @@ a {
   text-decoration: none;
   border-bottom: dotted #465298;
 }
+a.read-more {
+  margin-left: 5px;
+}
 
 header h1 a {
   text-decoration: none;
@@ -160,8 +163,11 @@ header p {
 }
 .square h3 {
   margin: 0;
-  border-bottom: dotted #fff;
   font-size: 2em;
+  border-bottom: dotted #fff;
+}
+.square h3 a {
+  border-bottom: 0;
 }
 .square p {
   margin: 1em auto;
