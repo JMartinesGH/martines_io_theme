@@ -19,15 +19,15 @@
   <div class="container">
 
     <header class="wrapper square">
-      <h1><?php bloginfo('name'); ?></h1>
-      <h2><?php bloginfo('description'); ?></h2>
-      <?php if (has_nav_menu('header-menu')) {
-        wp_nav_menu(array('theme_location' => 'header-menu'));
-      } ?>
-      <?php if( is_front_page() ): ?>
-        <!-- front page -->
+      <h1><a href="<?php echo get_home_url(); ?>" title="<?php bloginfo('name') . 'homepage'; ?>"><?php bloginfo('name'); ?></a></h1>
+      <?php if (is_front_page() || is_page('resume')) : ?>
+        <h2><?php echo the_field('mio-sub-header','option'); ?></h2>
         <p>
           <?php echo the_field('mio-introduction', 'option'); ?>
         </p>
-      <?php endif?>
+      <?php else:?>
+        <?php if (has_nav_menu('header-menu')) {
+          wp_nav_menu(array('theme_location' => 'header-menu'));
+        } ?>
+    <?php endif ?>
     </header>
