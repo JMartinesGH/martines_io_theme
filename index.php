@@ -21,6 +21,7 @@
     <?php endif; ?>
   </div>
   <div class="column square">
+    <h3>Projects</h3>
     <!-- insert some content here -->
   </div>
 </div>
