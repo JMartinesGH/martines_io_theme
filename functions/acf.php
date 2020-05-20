@@ -21,3 +21,5 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'martinesio-general-settings',
 	));	
 }
+
+include_once('acf-data.php');
