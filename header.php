@@ -21,9 +21,9 @@
     <header class="wrapper square">
       <h1><a href="<?php echo get_home_url(); ?>" title="<?php bloginfo('name') . 'homepage'; ?>"><?php bloginfo('name'); ?></a></h1>
       <?php if (is_front_page() || is_page('resume')) : ?>
-        <h2><?php echo the_field('mio-sub-header','option'); ?></h2>
+        <h2><?php if(the_field('mio-sub-header','option')) echo the_field('mio-sub-header','option'); ?></h2>
         <p>
-          <?php echo the_field('mio-introduction', 'option'); ?>
+          <?php if(the_field('mio-introduction','option')) echo the_field('mio-introduction', 'option'); ?>
         </p>
       <?php else:?>
         <?php if (has_nav_menu('header-menu')) {

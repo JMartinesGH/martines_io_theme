@@ -1,0 +1,24 @@
+{
+  "name": "martines_io_theme",
+  "version": "1.0.0",
+  "description": "\"martines.io theme\"",
+  "main": "index.js",
+  "scripts": {
+    "build:scripts": "wp-scripts build",
+    "start-build":"wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMartinesGH/martines_io_theme.git"
+  },
+  "author": "Jamie Martines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMartinesGH/martines_io_theme/issues"
+  },
+  "homepage": "https://github.com/JMartinesGH/martines_io_theme#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^16.1.1"
+  }
+}

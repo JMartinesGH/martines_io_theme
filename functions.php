@@ -35,3 +35,6 @@ require_once( get_template_directory() . '/functions/post-types.php');
 
 // acf
 require_once( get_template_directory() . '/functions/acf.php');
+
+// gutenberg
+require_once( get_template_directory() . '/functions/gutenberg.php');
